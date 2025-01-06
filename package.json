@@ -7,9 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d personal-site"
+    "preview": "vite preview"
   },
   "dependencies": {
     "gh-pages": "^6.3.0",
