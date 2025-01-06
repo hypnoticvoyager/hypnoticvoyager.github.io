@@ -1,0 +1,276 @@
+/* FONT DEFINITIONS */
+@font-face {
+  font-family: Silvera;
+  src: url("assets/font/Silvera.otf");
+}
+
+@font-face {
+  font-family: Lora;
+  src: url("src/assets/font/Lora-VariableFont_wght.ttf")
+}
+
+/* ANIMATIONS */
+@keyframes stretch {
+  from {letter-spacing: 0.0em}
+  to {letter-spacing: 0.05em}
+}
+
+::selection {
+  color: black;
+  background-color: white;
+}
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* PAGE BACKGROUND */
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+#starryBg {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#root {
+  color: white;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* HEADER AND NAV */
+header{
+  position: relative;
+}
+
+header h1 {
+  font-family: Silvera, serif;
+  font-size: 4em;
+  padding: 0.25em;
+  margin: 0;
+  text-align: center;
+
+  animation-name: stretch;
+  animation-direction: alternate;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+
+}
+
+#mt-div {
+  position: absolute;
+  top: 4em;
+  left: 1em;
+}
+
+#music-toggle {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+#music-toggle:hover {
+  outline: 2px solid white;
+}
+
+#music-toggle:active {
+  background-color: rgb(25,25,25);
+}
+
+#music-toggle img {
+  aspect-ratio: 1/1;
+  height: 4em;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  float: left;
+  margin: auto;
+}
+
+nav a, nav a:visited {
+  padding: 0.25em 0.6em;
+  color: white;
+  font-family: Lora, serif;
+  font-weight: bold;
+  font-size: 1.4em;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 48px;
+}
+
+nav a:hover {
+  color: black;
+  background-color: white;
+  text-decoration: none;
+}
+
+/* MAIN */
+#wrapper {
+  background-color: rgba(0,0,0,0.85);
+  border-left: 0.25em solid white;
+  border-right: 0.25em solid white;
+
+  margin: 0 auto;
+  padding: 0;
+
+  position: relative;
+
+  min-height: 100%;
+  min-width: 720px;
+  width: 70%;
+}
+
+/* COMMON */
+main {
+  color: white;
+  flex: 1;
+  font-family: Georgia, serif;
+  font-size: 1.1em;
+  padding: 1em 4em 4em 4em;
+}
+
+main h1, main h2, main h3, main h4, main h5, main h6 {
+  font-family: Lora, serif;
+  font-weight: lighter;
+  text-align: center;
+  margin: 0.25em;
+}
+
+a, a:visited {
+  color: rgb(255,0,125);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: rgba(255,0,125,0.25);
+  text-decoration: underline;
+}
+
+footer {
+  height: 2em;
+  width: 100%;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  text-align: center;
+}
+
+/* BLOG */
+
+
+/* PROJECTS */
+.prj-holder > ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.prj-holder > ul > li {
+  border: 0.2em solid white;
+  border-radius: 1em;
+  display: grid;
+  margin: 1em auto;
+  position: relative;
+  top: 0;
+  right: 0;
+
+  opacity: 0.75;
+  filter: grayscale(50%);
+
+  min-height: 4em;
+  width: 95%;
+
+  transition: 0.3s;
+}
+
+.prj-holder > ul > li:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+.prj-holder p {
+  margin: 1em;
+}
+
+.prj-holder > ul > li img {
+  margin: auto 1em;
+  grid-area: img;
+  height: 10em;
+  width: auto;
+}
+
+.prj-holder > ul > li:nth-child(odd) {
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "img content";
+}
+
+.prj-holder > ul > li:nth-child(even) {
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "content img";
+}
+
+.prj-info-holder {
+  margin: 1em;
+  grid-area: content;
+}
+
+.prj-list {
+  list-style: none;
+  padding: 0;
+}
+
+.prj-list li:before {
+  content: '\2605';
+  margin: 0 0.5em 0 1em;
+}
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
