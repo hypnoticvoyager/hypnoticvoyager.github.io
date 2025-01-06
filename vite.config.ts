@@ -13,5 +13,6 @@ export default defineConfig({
         assetFileNames: `assets/[name].[hash].[ext]`,
       },
     },
+    outDir: 'personal-site',
   },
 })
