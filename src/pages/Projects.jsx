@@ -69,7 +69,7 @@ function AllReleased() {
         new ReleasedProject(
             0,
             "Rotari",
-            "src/assets/project-icons/rotari-logo.png",
+            "/assets/project-icons/rotari-logo.png",
             "January 2022 - November 2023",
             "November 2023",
             "Android",
@@ -94,7 +94,7 @@ function AllUpcoming() {
         new UpcomingProject(
             0,
             "SkyEye",
-            "src/assets/favicon.png",
+            "/assets/favicon.png",
             "Planning",
             "2025",
             "Android, iOS",
@@ -103,7 +103,7 @@ function AllUpcoming() {
         new UpcomingProject(
             1,
             "Stargaze",
-            "src/assets/favicon.png",
+            "/assets/favicon.png",
             "Planning",
             "???",
             "Web",
@@ -112,7 +112,7 @@ function AllUpcoming() {
         new UpcomingProject(
             2,
             "Dungeon of the Abyss",
-            "src/assets/favicon.png",
+            "/assets/favicon.png",
             "Planning",
             "???",
             "Web, Android, iOS",
@@ -144,7 +144,7 @@ const Projects = () => {
             </section>
             <section id="prj-music">
                 <h2>Music</h2>
-                <a onClick={() => {musicChangePath("src/music/whirlpool.mp3");}}>THIS IS MY SECRET BUTTON THAT PLAYS MY SECRET TUNE!</a>
+                <a onClick={() => {musicChangePath("/music/whirlpool.mp3");}}>THIS IS MY SECRET BUTTON THAT PLAYS MY SECRET TUNE!</a>
             </section>
         </>
     )

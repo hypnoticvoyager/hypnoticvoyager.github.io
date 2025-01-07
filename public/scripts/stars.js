@@ -29,7 +29,7 @@ function addStar() {
 const stars = [];
 
 function init() {
-    starImg.src = "/src/assets/star.png";
+    starImg.src = "/assets/star.png";
 
     window.requestAnimationFrame(draw);
     const updateInterval = window.setInterval(update,1000/fps)

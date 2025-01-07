@@ -1,12 +1,12 @@
 /* FONT DEFINITIONS */
 @font-face {
   font-family: Silvera;
-  src: url("assets/font/Silvera.otf");
+  src: url('/assets/font/Silvera.otf');
 }
 
 @font-face {
   font-family: Lora;
-  src: url("src/assets/font/Lora-VariableFont_wght.ttf")
+  src: url("/assets/font/Lora-VariableFont_wght.ttf")
 }
 
 /* ANIMATIONS */

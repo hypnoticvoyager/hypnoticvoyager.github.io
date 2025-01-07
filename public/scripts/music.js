@@ -9,12 +9,12 @@ window.onload = () => {
         button.addEventListener("click",() => {
             if (music.paused) {
                 music.play();
-                image.src = "src/assets/ui-sound-on.png";
+                image.src = "/assets/ui-sound-on.png";
                 image.alt = "Music On";
                 isAllowed = true;
             } else {
                 music.pause();
-                image.src = "src/assets/ui-sound-off.png";
+                image.src = "/assets/ui-sound-off.png";
                 image.alt = "Music Off";
                 isAllowed = false;
             }

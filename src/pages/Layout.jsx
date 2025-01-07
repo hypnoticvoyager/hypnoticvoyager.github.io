@@ -5,7 +5,7 @@ const Layout = () => {
     return (
         <>
             <Helmet>
-                <script src="/src/cosmetic/music.js"></script>
+                <script src="/scripts/music.js"></script>
             </Helmet>
             <div id="wrapper">
                 <header>
@@ -13,11 +13,11 @@ const Layout = () => {
                         HypnoticvoyageR
                     </h1>
                     <audio loop id="now-playing">
-                        <source src="/src/music/starmap.mp3" type="audio/mpeg"/>
+                        <source src="/music/starmap.mp3" type="audio/mpeg"/>
                     </audio>
                     <div id="mt-div">
                         <button id="music-toggle">
-                            <img src="src/assets/ui-sound-off.png" alt="Music Off"/>
+                            <img src="/assets/ui-sound-off.png" alt="Music Off"/>
                         </button>
                     </div>
                     <nav>
