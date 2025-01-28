@@ -144,7 +144,6 @@ const Projects = () => {
             </section>
             <section id="prj-music">
                 <h2>Music</h2>
-                <a onClick={() => {musicChangePath("/music/whirlpool.mp3");}}>THIS IS MY SECRET BUTTON THAT PLAYS MY SECRET TUNE!</a>
             </section>
         </>
     )
