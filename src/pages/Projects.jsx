@@ -73,7 +73,7 @@ function AllReleased() {
             "January 2022 - November 2023",
             "November 2023",
             "Android",
-            "Spinny spin spin"
+            "PLACEHOLDER"
         ),
     ];
 
