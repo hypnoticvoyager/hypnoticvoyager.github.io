@@ -47,7 +47,7 @@ const Layout = () => {
                     <Outlet/>
                 </main>
                 <footer>
-                    &copy; 2025 hypnoticvoyager DO NOT STEAL
+                    &copy; 2025 hypnoticvoyager
                 </footer>
             </div>
         </>
