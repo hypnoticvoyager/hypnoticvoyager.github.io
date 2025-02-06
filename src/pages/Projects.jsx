@@ -1,4 +1,4 @@
-import {render} from "react-dom";
+import MusicPlayer from "../components/MusicPlayer.jsx";
 
 class ReleasedProject {
     constructor(id,title,iconPath,developmentPeriod,releaseDate,platforms,description) {
@@ -144,7 +144,7 @@ const Projects = () => {
             </section>
             <section id="prj-music">
                 <h2>Music</h2>
-                <a onClick={() => {musicChangePath("/music/whirlpool.mp3");}}>THIS IS MY SECRET BUTTON THAT PLAYS MY SECRET TUNE!</a>
+                <MusicPlayer musicPath={"/music/whirlpool.mp3"} musicTitle={"Whirlpool"} musicId={"Whirlpool"} />
             </section>
         </>
     )

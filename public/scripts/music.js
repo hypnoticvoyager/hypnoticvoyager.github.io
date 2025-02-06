@@ -1,22 +1,17 @@
+export const button = document.querySelector("#music-toggle");
+export const image = document.querySelector("#music-toggle img");
+export const music = document.querySelector("#now-playing");
+export const audioSrc = document.querySelector("#now-playing source");
+
+let isAllowed = false;
+
 window.onload = () => {
-    const button = document.querySelector("#music-toggle");
-    const image = document.querySelector("#music-toggle img");
-    const music = document.querySelector("#now-playing");
-
-    let isAllowed = false;
-
     if (button != null) {
         button.addEventListener("click",() => {
             if (music.paused) {
-                music.play();
-                image.src = "/assets/ui-sound-on.png";
-                image.alt = "Music On";
-                isAllowed = true;
+                musicPlay();
             } else {
-                music.pause();
-                image.src = "/assets/ui-sound-off.png";
-                image.alt = "Music Off";
-                isAllowed = false;
+                musicPause();
             }
         });
     }
@@ -30,13 +25,36 @@ window.onload = () => {
 }
 
 
-function musicChangePath(path) {
-    const audioSrc = document.querySelector("#now-playing source");
-    const audio = document.querySelector("#now-playing");
-
+export function musicChangePath(path) {
     if (audioSrc != null) {
         audioSrc.src = path;
-        audio.load();
-        audio.play();
+        music.load();
+        music.play();
     }
+}
+
+export function musicPlay() {
+    music.play();
+    image.src = "/assets/ui-sound-on.png";
+    image.alt = "Music On";
+    isAllowed = true;
+}
+
+export function musicPause() {
+    music.pause();
+    image.src = "/assets/ui-sound-off.png";
+    image.alt = "Music Off";
+    isAllowed = false;
+}
+
+export function musicIsPaused() {
+    return music.paused;
+}
+
+export function musicGetSource() {
+    return audioSrc.src;
+}
+
+export function musicChangePos(percent) {
+    music.currentTime=percent * music.duration;
 }

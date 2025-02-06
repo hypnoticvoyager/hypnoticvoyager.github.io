@@ -5,7 +5,7 @@ const Layout = () => {
     return (
         <>
             <Helmet>
-                <script src="/scripts/music.js"></script>
+                <script src="/scripts/music.js" type={"module"}></script>
             </Helmet>
             <div id="wrapper">
                 <header>
