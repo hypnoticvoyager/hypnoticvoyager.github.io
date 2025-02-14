@@ -9,7 +9,7 @@ const Layout = () => {
             </Helmet>
             <div id="wrapper">
                 <header>
-                <h1>
+                    <h1>
                         HypnoticvoyageR
                     </h1>
                     <audio loop id="now-playing">

@@ -1,83 +1,24 @@
-import MusicPlayer from "../components/MusicPlayer.jsx";
-
-class ReleasedProject {
-    constructor(id,title,iconPath,developmentPeriod,releaseDate,platforms,description) {
-        this.id = id;
-        this.title = title;
-        this.iconPath = iconPath
-        this.developmentPeriod = developmentPeriod;
-        this.releaseData = releaseDate;
-        this.platforms = platforms;
-        this.description = description;
-    }
-
-    render() {
-        return (
-            <>
-                <li key={this.id}>
-                    <img src={this.iconPath} alt={this.title + " Logo"}/>
-                    <div className="prj-info-holder">
-                        <h3>{this.title}</h3>
-                        <ul className="prj-list">
-                            <li>Development Period: {this.developmentPeriod}</li>
-                            <li>Release Date: {this.releaseData}</li>
-                            <li>Platform(s): {this.platforms}</li>
-                        </ul>
-                        <p>{this.description}</p>
-                    </div>
-                </li>
-            </>
-        )
-    }
-}
-
-class UpcomingProject {
-    constructor(id,title,iconPath,status,releaseDate,platforms,description) {
-        this.id = id;
-        this.title = title;
-        this.iconPath = iconPath
-        this.status = status;
-        this.releaseData = releaseDate;
-        this.platforms = platforms;
-        this.description = description;
-    }
-
-    render() {
-        return (
-            <>
-                <li key={this.id}>
-                    <img src={this.iconPath} alt={this.title + " Logo"}/>
-                    <div className="prj-info-holder">
-                        <h3>{this.title}</h3>
-                        <ul className="prj-list">
-                            <li>Status: {this.status}</li>
-                            <li>Estimated Release: {this.releaseData}</li>
-                            <li>Platform(s): {this.platforms}</li>
-                        </ul>
-                        <p>{this.description}</p>
-                    </div>
-                </li>
-            </>
-        )
-    }
-}
-
-
+import {ProjectComponent} from "../components/ProjectComponent.tsx";
+import {Project} from "../objects/Project.ts";
 
 function AllReleased() {
     const releasedProjects = [
-        new ReleasedProject(
+        new Project(
             0,
-            "Rotari",
-            "/assets/project-icons/rotari-logo.png",
-            "January 2022 - November 2023",
-            "November 2023",
-            "Android",
-            "PLACEHOLDER"
-        ),
+            "Test Project",
+            "Complete",
+            "0.0.1",
+            "/assets/favicon.png",
+            true,
+            "Today",
+            "Yesterday - Today",
+            "All of them",
+            "This is a short description for the Test Project",
+            "This is a long description for the Test Project"
+        )
     ];
 
-    const rendered = releasedProjects.map((project) => (project.render()));
+    const rendered = releasedProjects.map((project) => (<ProjectComponent project={project}></ProjectComponent>));
 
     return (
         <>
@@ -91,36 +32,22 @@ function AllReleased() {
 
 function AllUpcoming() {
     const upcomingProjects = [
-        new UpcomingProject(
+        new Project(
             0,
-            "SkyEye",
+            "Test Project",
+            "Complete",
+            "0.0.1",
             "/assets/favicon.png",
-            "Planning",
-            "2025",
-            "Android, iOS",
-            "SkyEye is an app that will display weather conditions relevant to stargazing, such as sky cover, moon rise and set, and moon phase."
-        ),
-        new UpcomingProject(
-            1,
-            "Stargaze",
-            "/assets/favicon.png",
-            "Planning",
-            "???",
-            "Web",
-            "Stargaze is a map that displays public locations near you with ideal conditions for stargazing."
-        ),
-        new UpcomingProject(
-            2,
-            "Dungeon of the Abyss",
-            "/assets/favicon.png",
-            "Planning",
-            "???",
-            "Web, Android, iOS",
-            "A dungeon crawling roguelike game featuring a turn based battle system and an assortment of fun and interesting items."
-        ),
+            false,
+            "Today",
+            "Yesterday - Today",
+            "All of them",
+            "This is a short description for the Test Project",
+            "This is a long description for the Test Project"
+        )
     ];
 
-    const rendered = upcomingProjects.map((project) => (project.render()));
+    const rendered = upcomingProjects.map((project) => (<ProjectComponent project={project}></ProjectComponent>));
 
     return (
         <>
@@ -141,10 +68,6 @@ const Projects = () => {
             </section>
             <section id="prj-upcoming" className="prj-holder">
                 <AllUpcoming />
-            </section>
-            <section id="prj-music">
-                <h2>Music</h2>
-                <MusicPlayer musicPath={"/music/whirlpool.mp3"} musicTitle={"Whirlpool"} musicId={"Whirlpool"} />
             </section>
         </>
     )

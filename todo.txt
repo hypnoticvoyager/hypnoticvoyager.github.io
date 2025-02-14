@@ -1,0 +1,54 @@
+TODO
+
+- Home
+-- Populate Page
+
+- About
+-- Populate Page
+
+- Blog
+-- SQL Connection
+-- Blog Post Class/Component
+-- Blog Post Subpages
+-- Quill Integration
+-- Sign up for newsletter
+
+- Projects
+-- Project Subpages
+--- Subpages also display relevant news
+-- Project Class/Component (DONE)
+-- External Link Class/Component
+-- SQL Connection
+
+- Star Map
+-- Draggable
+-- Multiple Galaxies
+-- Email Verified
+
+- Contact
+-- Build Form
+-- Send to email
+
+- Portfolio
+-- Import Projects
+-- ProjectComponent Types (Game, Software, Website, etc.)
+-- Separate from main website
+
+- Treasure Hunt
+-- 3 Keys (Star Map, Background, ???)
+-- Vault
+
+- Styling
+-- Light Mode
+-- Supports other screen sizes
+
+- Admin Page
+-- Password Authenticated
+-- Add new projects
+-- Add new blog posts
+--- Can be scheduled
+--- View Newsletter Subscriptions
+-- Manage Star Map
+--- Moderation Queue with toggle
+--- Delete Stars
+--- Ban Emails
